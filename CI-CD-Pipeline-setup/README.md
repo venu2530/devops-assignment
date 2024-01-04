@@ -48,7 +48,7 @@ deploy:
     - echo "Deploying to production"
     - docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY
     - docker push $IMAGE_NAME
-
+```
 
 3. Configure Docker Registry:
 GitLab CI/CD uses the GitLab Container Registry to store Docker images. Ensure that the Container Registry is enabled in your project settings.
