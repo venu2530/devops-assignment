@@ -1,4 +1,4 @@
-Steps to create CI/CD Pieline in Gitlab
+Steps to create CI/CD Pipeline in Gitlab
 
 
 # Flask Redis Counter
