@@ -18,13 +18,13 @@ This repository contains Terraform configuration files to deploy an Amazon EKS c
 
 2. Initialize and apply the Terraform configuration
 
- ```
-terraform init
-terraform apply
+   ```bash
+   terraform init
+   terraform apply
 ```
 
 3. Access EKS cluster
 
-```
-export KUBECONFIG=$(terraform output kubeconfig)
+   ```bash
+   export KUBECONFIG=$(terraform output kubeconfig)
 ```
