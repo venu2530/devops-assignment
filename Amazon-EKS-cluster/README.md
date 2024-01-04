@@ -18,7 +18,7 @@ This repository contains Terraform configuration files to deploy an Amazon EKS c
 
 2. Initialize and apply the Terraform configuration
 
-   ```bash
+ ```
 terraform init
 terraform apply
 ```
