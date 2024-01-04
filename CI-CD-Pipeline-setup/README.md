@@ -1,15 +1,24 @@
 Steps to create CI/CD Pieline in Gitlab
 
 
-1. Setup GitLab Repository:
-Create a new GitLab repository for your project.
-Push your existing code to this repository.
+# Flask Redis Counter
 
-2. Define GitLab CI/CD Configuration:
-Create a file named .gitlab-ci.yml in the root of your project.
-Define the stages and jobs required for building, testing, and deploying the application.
-yaml
-Copy code
+This is a simple Flask application that displays a message on the webpage, indicating the visitor count fetched from Redis. The counter increments with each visit to the index page.
+
+## Automated Deployment with GitLab CI/CD
+
+This project utilizes GitLab CI/CD for automated building, testing, and deployment to production. Below is a step-by-step guide on how to set up and configure the CI/CD pipeline.
+
+### 1. GitLab Repository Setup
+
+- Create a new GitLab repository for your project.
+- Push your existing code to this repository.
+
+### 2. Define GitLab CI/CD Configuration
+
+Create a file named `.gitlab-ci.yml` in the root of your project with the following content:
+
+```yaml
 stages:
   - build
   - test
@@ -39,7 +48,7 @@ deploy:
     - echo "Deploying to production"
     - docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY
     - docker push $IMAGE_NAME
-Make sure to replace <your_username> and <your_project_name> with your GitLab username and project name.
+
 
 3. Configure Docker Registry:
 GitLab CI/CD uses the GitLab Container Registry to store Docker images. Ensure that the Container Registry is enabled in your project settings.
